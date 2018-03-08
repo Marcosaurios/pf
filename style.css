@@ -1,0 +1,151 @@
+/*
+Theme Name: Custom flat portfolio 
+Theme URI: https://www.marcosurios.com
+Author: Marcos Urios Gomez
+Author URI: https://www.marcosurios.com
+Description: Simple custom theme
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog
+Text Domain: flat
+*/
+
+
+
+/* Sorted by order of appearance */
+
+body{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+
+#card-info{
+    width: 60%;
+    /*margin: 30px auto auto;*/
+    margin: 0 auto;
+    transition: 2s;
+}
+main{
+    background-color: #EEEEEE;
+    height: 400px;
+    padding-top: 100px;
+}
+
+#sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#sidebtn{
+    visibility: hidden;
+    display: none;
+}
+#closebtn{
+    visibility: hidden;
+    display: none;
+}
+a#sidebtn:hover, a#closebtn:hover{
+	shadow: 2px 2px 10px #000;
+}
+
+#grid{
+    padding: 150px 10% 150px 10%;
+}
+
+#grid>div>div:hover{
+  scale: 15%;
+  transition: 1s;
+}
+
+.uk-card-hover{
+    animation-delay: 4s;
+    transition: 2s;
+}
+
+
+#contact>h3{
+  text-align: center;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #F5F5F5;
+  padding: 1em;
+}
+footer>p{
+  margin: 0 auto;
+}
+footer>a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media (max-width: 480px){
+
+    #card-info{
+        width: 90%;
+        /*margin: 30px auto auto;*/
+        margin: 0 auto;
+    }
+    main{
+      height: 350px;
+        padding-top: 70px;
+    }
+    nav{
+        visibility: hidden;
+        display: none;
+    }
+    #sidebtn{
+        visibility: visible;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        position: absolute;
+        position: fixed;
+        margin: 5px;
+    }
+    #top{
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    #sidenav{
+        background-color: aliceblue;
+    }
+    #closebtn{
+        visibility: hidden;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        position: absolute;
+        position: fixed;
+        margin: 5px;
+    }
+    #smooth-fade{
+        transition: 3s;
+    }
+    #grid{
+        padding-top: 30px;
+    }
+}
+
+/* Functions */
+@keyframes slide {
+    from {left: 0px}
+    to {left: 200px}
+}
